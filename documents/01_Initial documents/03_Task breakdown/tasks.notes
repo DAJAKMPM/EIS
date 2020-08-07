@@ -1,0 +1,24 @@
+FRONTEND:
+- site layout
+- viewers pages: {
+    - HOME 
+    - NEWS 
+    - BUSINESS 
+    - ENTERTAINMENT 
+    - SPORTS 
+    - LIFESTYLE 
+}
+
+- admin pages: {
+    - Article management (table)
+    - Article creation
+    - Article update
+    - Profile management (view/update)
+    - Login page
+}
+
+BACKEND:
+- ARTICLE - CRUD - backend
+- Login - POST
+- Profile - GET/PUT
+
