@@ -1,11 +1,11 @@
-import React from "react";
-import {FullWindowLayoutProps} from "../../../components/layout/full-window-layout/types";
-import FullWindowLayout from "../../../components/layout/full-window-layout";
-import HomeComponent from "../../../components/admin/home";
+import React from 'react';
+import { FullWindowLayoutProps } from '../../../components/admin/layout/full-window-layout/types';
+import FullWindowLayout from '../../../components/admin/layout/full-window-layout';
+import HomeComponent from '../../../components/admin/home';
 
 const Home: React.FC = () => {
   const fullWindowLayoutProps: FullWindowLayoutProps = {
-    headerTitle: "Home",
+    headerTitle: 'Home',
   };
 
   return (
