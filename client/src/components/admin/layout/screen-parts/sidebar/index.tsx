@@ -1,5 +1,5 @@
-import React from "react";
-import clsx from "clsx";
+import React from 'react';
+import clsx from 'clsx';
 import {
   Drawer,
   List,
@@ -8,14 +8,14 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-} from "@material-ui/core";
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import MenuBookIcon from "@material-ui/icons/MenuBook";
-import RecentActorsIcon from "@material-ui/icons/RecentActors";
-import {useStyles} from "./styles";
-import {useTheme} from "@material-ui/core";
-import {SidebarProps} from "./types";
+} from '@material-ui/core';
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import DashboardIcon from '@material-ui/icons/Dashboard';
+import MenuBookIcon from '@material-ui/icons/MenuBook';
+import {useStyles} from './styles';
+import {useTheme} from '@material-ui/core';
+import {SidebarProps} from './types';
 
 const Sidebar: React.FC<SidebarProps> = ({open, setOpen}) => {
   const classes = useStyles();
@@ -41,7 +41,7 @@ const Sidebar: React.FC<SidebarProps> = ({open, setOpen}) => {
     >
       <div className={classes.toolbar}>
         <IconButton onClick={handleDrawerClose}>
-          {theme.direction === "rtl" ? (
+          {theme.direction === 'rtl' ? (
             <ChevronRightIcon />
           ) : (
             <ChevronLeftIcon />
@@ -52,15 +52,15 @@ const Sidebar: React.FC<SidebarProps> = ({open, setOpen}) => {
       <List>
         <ListItem button>
           <ListItemIcon>
-            <MenuBookIcon />
+            <DashboardIcon />
           </ListItemIcon>
-          <ListItemText primary="Articles" />
+          <ListItemText primary="Dashboard" />
         </ListItem>
         <ListItem button>
           <ListItemIcon>
-            <RecentActorsIcon />
+            <MenuBookIcon />
           </ListItemIcon>
-          <ListItemText primary="Contact Details" />
+          <ListItemText primary="Articles" />
         </ListItem>
       </List>
     </Drawer>

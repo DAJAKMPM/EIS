@@ -1,18 +1,18 @@
 import React from 'react';
 import {FullWindowLayoutProps} from '../../../components/admin/layout/full-window-layout/types';
 import FullWindowLayout from '../../../components/admin/layout/full-window-layout';
-import HomeComponent from '../../../components/admin/home';
+import DashboardComponent from '../../../components/admin/dashboard';
 
-const Home: React.FC = () => {
+const DashboardPage: React.FC = () => {
   const fullWindowLayoutProps: FullWindowLayoutProps = {
-    headerTitle: 'Home',
+    headerTitle: 'Dashboard',
   };
 
   return (
     <FullWindowLayout {...fullWindowLayoutProps}>
-      <HomeComponent />
+      <DashboardComponent />
     </FullWindowLayout>
   );
 };
 
-export default Home;
+export default DashboardPage;

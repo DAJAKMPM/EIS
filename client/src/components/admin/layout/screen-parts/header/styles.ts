@@ -1,10 +1,10 @@
 import {createStyles, makeStyles, Theme} from '@material-ui/core/styles';
-import {red, blue} from '@material-ui/core/colors';
+import {red, blueGrey, blue} from '@material-ui/core/colors';
 
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     appBar: {
-      backgroundColor: blue[900],
+      backgroundColor: blueGrey[900],
       zIndex: theme.zIndex.drawer + 1,
       transition: theme.transitions.create(['width', 'margin'], {
         easing: theme.transitions.easing.sharp,
