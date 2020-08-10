@@ -1,5 +1,5 @@
 import React from 'react';
-import { FullWindowLayoutProps } from '../../../components/admin/layout/full-window-layout/types';
+import {FullWindowLayoutProps} from '../../../components/admin/layout/full-window-layout/types';
 import FullWindowLayout from '../../../components/admin/layout/full-window-layout';
 import HomeComponent from '../../../components/admin/home';
 

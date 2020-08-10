@@ -1,10 +1,12 @@
-import {createStyles, makeStyles, Theme} from "@material-ui/core/styles";
+import {createStyles, makeStyles, Theme} from '@material-ui/core/styles';
+import {red, blue} from '@material-ui/core/colors';
 
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     appBar: {
+      backgroundColor: blue[900],
       zIndex: theme.zIndex.drawer + 1,
-      transition: theme.transitions.create(["width", "margin"], {
+      transition: theme.transitions.create(['width', 'margin'], {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen,
       }),
@@ -12,7 +14,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     appBarShift: {
       marginLeft: 240,
       width: `calc(100% - ${240}px)`,
-      transition: theme.transitions.create(["width", "margin"], {
+      transition: theme.transitions.create(['width', 'margin'], {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.enteringScreen,
       }),
@@ -21,7 +23,26 @@ export const useStyles = makeStyles((theme: Theme) =>
       marginRight: 36,
     },
     hide: {
-      display: "none",
+      display: 'none',
+    },
+    grow: {
+      flexGrow: 1,
+    },
+    avatarColor: {
+      color: red[500],
+      backgroundColor: blue[50],
+    },
+    sectionDesktop: {
+      display: 'none',
+      [theme.breakpoints.up('md')]: {
+        display: 'flex',
+      },
+    },
+    sectionMobile: {
+      display: 'flex',
+      [theme.breakpoints.up('md')]: {
+        display: 'none',
+      },
     },
   })
 );
