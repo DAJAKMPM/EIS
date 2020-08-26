@@ -1,7 +1,8 @@
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
+import clsx from 'clsx';
+import {Chip} from '@material-ui/core';
 import {useStyles} from '../styles';
-import DashboardTitle from '../title';
+import DashboardTitle from '../../common/title';
 
 const DashboardArticlesToday: React.FC = () => {
   const classes = useStyles();
@@ -9,37 +10,21 @@ const DashboardArticlesToday: React.FC = () => {
   return (
     <React.Fragment>
       <DashboardTitle>Articles today</DashboardTitle>
-      <Typography className={classes.totalArticlesPerDay} variant="h6">
-        Business: 22
-      </Typography>
-      <Typography
-        className={classes.totalArticlesPerDay}
-        component="span"
-        variant="h6"
-      >
-        Environment: 1
-      </Typography>
-      <Typography
-        className={classes.totalArticlesPerDay}
-        component="span"
-        variant="h6"
-      >
-        Health: 3
-      </Typography>
-      <Typography
-        className={classes.totalArticlesPerDay}
-        component="span"
-        variant="h6"
-      >
-        Sports: 4
-      </Typography>
-      <Typography
-        className={classes.totalArticlesPerDay}
-        component="span"
-        variant="h6"
-      >
-        Lifestyle: 9
-      </Typography>
+      <Chip
+        label="Headlines: 30"
+        className={clsx(classes.articlesPos, classes.chipColor)}
+      />
+      <Chip label="Sports: 30" className={classes.articlesPos} />
+      <Chip
+        label="Entertainment: 30"
+        className={clsx(classes.articlesPos, classes.chipColor)}
+      />
+      <Chip label="Lifestyle: 30" className={classes.articlesPos} />
+      <Chip
+        label="Health: 30"
+        className={clsx(classes.articlesPos, classes.chipColor)}
+      />
+      <Chip label="Travel: 30" className={classes.articlesPos} />
     </React.Fragment>
   );
 };

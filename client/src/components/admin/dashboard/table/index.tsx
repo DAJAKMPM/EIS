@@ -2,7 +2,7 @@ import React from 'react';
 import {Link, Table, TableBody, TableHead, TableRow} from '@material-ui/core';
 import {useStyles, StyledTableCell} from '../styles';
 import {contentFormatter} from '../logics';
-import DashboardTitle from '../title';
+import DashboardTitle from '../../common/title';
 
 const DashboardTable: React.FC = () => {
   const classes = useStyles();
@@ -87,7 +87,7 @@ const DashboardTable: React.FC = () => {
         </TableBody>
       </Table>
       <div className={classes.seeMore}>
-        <Link color="textSecondary" href="#">
+        <Link className={classes.fontLightGreen} href="/admin/news">
           See more articles
         </Link>
       </div>

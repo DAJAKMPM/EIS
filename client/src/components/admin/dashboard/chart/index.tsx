@@ -8,13 +8,13 @@ import {
   CartesianGrid,
   Tooltip,
 } from 'recharts';
-import DashboardTitle from '../title';
+import DashboardTitle from '../../common/title';
 
 const data = [
   {name: 'Business', total: 20},
   {name: 'Entertainment', total: 1},
   {name: 'Sports', total: 12},
-  {name: 'Lifestyle', total: 3},
+  {name: 'Headlines', total: 3},
   {name: 'Health', total: 25},
   {name: 'Travel', total: 30},
 ];

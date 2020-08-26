@@ -50,13 +50,13 @@ const Sidebar: React.FC<SidebarProps> = ({open, setOpen}) => {
       </div>
       <Divider />
       <List>
-        <ListItem button>
+        <ListItem button component="a" href="/admin">
           <ListItemIcon>
             <DashboardIcon />
           </ListItemIcon>
           <ListItemText primary="Dashboard" />
         </ListItem>
-        <ListItem button>
+        <ListItem button component="a" href="/admin/news">
           <ListItemIcon>
             <MenuBookIcon />
           </ListItemIcon>

@@ -4,16 +4,10 @@ import {
   withStyles,
   createStyles,
 } from '@material-ui/core/styles';
-import {blueGrey, teal} from '@material-ui/core/colors';
+import {blueGrey} from '@material-ui/core/colors';
 import {TableCell} from '@material-ui/core';
 
 export const useStyles = makeStyles((theme: Theme) => ({
-  seeMore: {
-    marginTop: theme.spacing(3),
-  },
-  depositContext: {
-    flex: 1,
-  },
   paper: {
     padding: theme.spacing(6),
     backgroundColor: blueGrey[800],
@@ -22,23 +16,15 @@ export const useStyles = makeStyles((theme: Theme) => ({
     flexDirection: 'column',
   },
   tableHeight: {
-    height: 380,
+    height: 530,
   },
-  chartHeight: {
-    height: 400,
+  paginationPos: {
+    marginTop: '15px',
+    display: 'flex',
+    marginLeft: 'auto',
   },
-  articlesTodayHeight: {
-    height: 400,
-  },
-  articlesPos: {
-    marginTop: 12,
-  },
-  chipColor: {
-    backgroundColor: 'rgb(130, 202, 157)',
+  paginationColor: {
     color: 'white',
-  },
-  fontLightGreen: {
-    color: teal['A200'],
   },
 }));
 
@@ -46,10 +32,12 @@ export const StyledTableCell = withStyles((theme: Theme) =>
   createStyles({
     head: {
       color: theme.palette.common.white,
+      fontSize: 15,
     },
     body: {
-      fontSize: 14,
+      fontSize: 13,
       color: theme.palette.common.white,
+      padding: 20,
     },
   })
 )(TableCell);

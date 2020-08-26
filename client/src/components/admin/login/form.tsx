@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   TextField,
   FormControlLabel,
@@ -6,20 +6,16 @@ import {
   Link,
   Grid,
   Button,
-} from "@material-ui/core";
-import {useStyles} from "./styles";
+} from '@material-ui/core';
+import {useStyles} from './styles';
 
 const LoginForm = () => {
   const classes = useStyles();
 
-  const handleSubmit = () => {
-    console.log("temporary holder");
-  };
-
   return (
     <form className={classes.form}>
       <TextField
-        style={{background: "white"}}
+        style={{background: 'white'}}
         variant="outlined"
         margin="normal"
         required
@@ -42,7 +38,7 @@ const LoginForm = () => {
         autoComplete="current-password"
       />
       <FormControlLabel
-        control={<Checkbox value="remember" color="primary" />}
+        control={<Checkbox value="remember" color="default" />}
         label="Remember me"
       />
       <Button
@@ -51,7 +47,7 @@ const LoginForm = () => {
         variant="contained"
         color="primary"
         className={classes.submit}
-        onClick={handleSubmit}
+        href="/admin"
       >
         Login
       </Button>

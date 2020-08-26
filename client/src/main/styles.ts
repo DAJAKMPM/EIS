@@ -1,5 +1,5 @@
 import {unstable_createMuiStrictModeTheme as createMuiTheme} from '@material-ui/core/styles';
-import {blue, teal, lightGreen} from '@material-ui/core/colors';
+import {blue, lightGreen} from '@material-ui/core/colors';
 
 export const outerTheme = createMuiTheme({
   palette: {
@@ -9,9 +9,7 @@ export const outerTheme = createMuiTheme({
     secondary: {
       main: lightGreen[50],
     },
-    text: {
-      secondary: teal['A200'],
-    },
+
     background: {
       default: lightGreen[50],
     },
