@@ -1,5 +1,5 @@
-import React from 'react';
-import clsx from 'clsx';
+import React from "react";
+import clsx from "clsx";
 import {
   Drawer,
   List,
@@ -8,14 +8,13 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-} from '@material-ui/core';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import DashboardIcon from '@material-ui/icons/Dashboard';
-import MenuBookIcon from '@material-ui/icons/MenuBook';
-import {useStyles} from './styles';
-import {useTheme} from '@material-ui/core';
-import {SidebarProps} from './types';
+} from "@material-ui/core";
+import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
+import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import SupervisorAccountIcon from "@material-ui/icons/SupervisorAccount";
+import {useStyles} from "./styles";
+import {useTheme} from "@material-ui/core";
+import {SidebarProps} from "./types";
 
 const Sidebar: React.FC<SidebarProps> = ({open, setOpen}) => {
   const classes = useStyles();
@@ -41,7 +40,7 @@ const Sidebar: React.FC<SidebarProps> = ({open, setOpen}) => {
     >
       <div className={classes.toolbar}>
         <IconButton onClick={handleDrawerClose}>
-          {theme.direction === 'rtl' ? (
+          {theme.direction === "rtl" ? (
             <ChevronRightIcon />
           ) : (
             <ChevronLeftIcon />
@@ -50,17 +49,11 @@ const Sidebar: React.FC<SidebarProps> = ({open, setOpen}) => {
       </div>
       <Divider />
       <List>
-        <ListItem button component="a" href="/admin">
-          <ListItemIcon>
-            <DashboardIcon />
-          </ListItemIcon>
-          <ListItemText primary="Dashboard" />
-        </ListItem>
         <ListItem button component="a" href="/admin/news">
           <ListItemIcon>
-            <MenuBookIcon />
+            <SupervisorAccountIcon />
           </ListItemIcon>
-          <ListItemText primary="Articles" />
+          <ListItemText primary="Employees" />
         </ListItem>
       </List>
     </Drawer>

@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import clsx from 'clsx';
+import React, {useState} from "react";
+import clsx from "clsx";
 import {
   Toolbar,
   Typography,
@@ -8,13 +8,13 @@ import {
   Menu,
   MenuItem,
   Avatar,
-} from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-import MoreIcon from '@material-ui/icons/MoreVert';
-import AccountCircle from '@material-ui/icons/AccountCircle';
-import {HeaderProps} from './types';
-import {useStyles} from './styles';
+} from "@material-ui/core";
+import MenuIcon from "@material-ui/icons/Menu";
+import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+import MoreIcon from "@material-ui/icons/MoreVert";
+import AccountCircle from "@material-ui/icons/AccountCircle";
+import {HeaderProps} from "./types";
+import {useStyles} from "./styles";
 
 const Header: React.FC<HeaderProps> = ({open, setOpen, headerTitle}) => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -48,16 +48,16 @@ const Header: React.FC<HeaderProps> = ({open, setOpen, headerTitle}) => {
     handleMobileMenuClose();
   };
 
-  const menuId = 'primary-search-account-menu';
-  const mobileMenuId = 'primary-search-account-menu-mobile';
+  const menuId = "primary-search-account-menu";
+  const mobileMenuId = "primary-search-account-menu-mobile";
 
   const renderMenu = (
     <Menu
       anchorEl={anchorEl}
-      anchorOrigin={{vertical: 'top', horizontal: 'left'}}
+      anchorOrigin={{vertical: "top", horizontal: "left"}}
       id={menuId}
       keepMounted
-      transformOrigin={{vertical: 'top', horizontal: 'left'}}
+      transformOrigin={{vertical: "top", horizontal: "left"}}
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
@@ -72,7 +72,7 @@ const Header: React.FC<HeaderProps> = ({open, setOpen, headerTitle}) => {
         </IconButton>
         Profile
       </MenuItem>
-      <MenuItem onClick={() => console.log('LOGGED OUT')}>
+      <MenuItem onClick={() => console.log("LOGGED OUT")}>
         <IconButton
           aria-label="account of current user"
           aria-controls="primary-search-account-menu"
@@ -89,10 +89,10 @@ const Header: React.FC<HeaderProps> = ({open, setOpen, headerTitle}) => {
   const renderMobileMenu = (
     <Menu
       anchorEl={mobileMoreAnchorEl}
-      anchorOrigin={{vertical: 'top', horizontal: 'left'}}
+      anchorOrigin={{vertical: "top", horizontal: "left"}}
       id={mobileMenuId}
       keepMounted
-      transformOrigin={{vertical: 'top', horizontal: 'left'}}
+      transformOrigin={{vertical: "top", horizontal: "left"}}
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
@@ -107,7 +107,7 @@ const Header: React.FC<HeaderProps> = ({open, setOpen, headerTitle}) => {
         </IconButton>
         Profile
       </MenuItem>
-      <MenuItem onClick={() => console.log('LOGGED OUT')}>
+      <MenuItem onClick={() => console.log("LOGGED OUT")}>
         <IconButton
           aria-label="account of current user"
           aria-controls="primary-search-account-menu"
@@ -125,6 +125,7 @@ const Header: React.FC<HeaderProps> = ({open, setOpen, headerTitle}) => {
     <React.Fragment>
       <AppBar
         position="fixed"
+        color="primary"
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
         })}

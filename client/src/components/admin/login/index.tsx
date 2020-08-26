@@ -8,7 +8,7 @@ const LoginComponent: React.FC = () => {
   const classes = useStyles();
 
   return (
-    <Paper className={classes.paper} elevation={3} color="red">
+    <Paper className={classes.paper} elevation={3}>
       <Avatar className={classes.avatar}>
         <LockOutlinedIcon />
       </Avatar>

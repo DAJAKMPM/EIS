@@ -1,29 +1,36 @@
-import React from 'react';
+import React from "react";
 import {
   TextField,
-  FormControlLabel,
-  Checkbox,
   Link,
   Grid,
   Button,
-} from '@material-ui/core';
-import {useStyles} from './styles';
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
+} from "@material-ui/core";
+import {useStyles} from "./styles";
 
 const LoginForm = () => {
   const classes = useStyles();
 
+  const [company, setCompany] = React.useState("");
+
+  const handleChange = (event: React.ChangeEvent<{value: unknown}>) => {
+    setCompany(event.target.value as string);
+  };
+
   return (
     <form className={classes.form}>
       <TextField
-        style={{background: 'white'}}
         variant="outlined"
         margin="normal"
         required
         fullWidth
-        id="email"
-        label="Email Address"
-        name="email"
-        autoComplete="email"
+        id="username"
+        label="Username"
+        name="username"
+        autoComplete="username"
         autoFocus
       />
       <TextField
@@ -37,10 +44,28 @@ const LoginForm = () => {
         id="password"
         autoComplete="current-password"
       />
-      <FormControlLabel
-        control={<Checkbox value="remember" color="default" />}
-        label="Remember me"
-      />
+      <FormControl
+        fullWidth
+        required
+        variant="outlined"
+        className={classes.formControl}
+      >
+        <InputLabel id="demo-simple-select-outlined-label">
+          Company/Site
+        </InputLabel>
+        <Select
+          labelId="demo-simple-select-outlined-label"
+          id="demo-simple-select-outlined"
+          value={company}
+          onChange={handleChange}
+          label="Company/Site"
+        >
+          <MenuItem value={10}>Fujitsu</MenuItem>
+          <MenuItem value={20}>Weserv</MenuItem>
+          <MenuItem value={30}>Google</MenuItem>
+        </Select>
+      </FormControl>
+
       <Button
         type="submit"
         fullWidth
