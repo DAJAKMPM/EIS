@@ -1,13 +1,6 @@
 FRONTEND:
 - site layout
-- viewers pages: {
-    - HOME 
-    - NEWS 
-    - BUSINESS 
-    - ENTERTAINMENT 
-    - SPORTS 
-    - LIFESTYLE 
-}
+
 
 - admin pages: {
     - Article management (table)
@@ -15,6 +8,15 @@ FRONTEND:
     - Article update
     - Profile management (view/update)
     - Login page
+}
+
+- viewers pages: {
+    - HOME 
+    - NEWS 
+    - BUSINESS 
+    - ENTERTAINMENT 
+    - SPORTS 
+    - LIFESTYLE 
 }
 
 BACKEND:
