@@ -10,7 +10,7 @@ import {
 } from '@material-ui/core';
 import Personal from './personal';
 
-const Input = () => {
+const Input: React.FC = () => {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
 

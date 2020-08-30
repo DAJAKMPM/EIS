@@ -1,10 +1,10 @@
-import {unstable_createMuiStrictModeTheme as createMuiTheme} from "@material-ui/core/styles";
-import {grey, lightGreen} from "@material-ui/core/colors";
+import {unstable_createMuiStrictModeTheme as createMuiTheme} from '@material-ui/core/styles';
+import {grey, lightGreen} from '@material-ui/core/colors';
 
 export const outerTheme = createMuiTheme({
   palette: {
     primary: {
-      main: "#00796b",
+      main: '#00796b',
     },
     secondary: {
       main: lightGreen[50],
@@ -16,25 +16,25 @@ export const outerTheme = createMuiTheme({
   overrides: {
     MuiSelect: {
       select: {
-        "&:focus": {
-          backgroundColor: "white",
-          borderColor: "white",
-          border: "white",
+        '&:focus': {
+          backgroundColor: 'white',
+          borderColor: 'white',
+          border: 'white',
         },
-        "& .Mui-focused": {
-          borderColor: "white",
+        '& .Mui-focused': {
+          borderColor: 'white',
         },
-        "&:before": {
-          borderColor: "white",
+        '&:before': {
+          borderColor: 'white',
         },
-        "&:after": {
-          borderColor: "white",
+        '&:after': {
+          borderColor: 'white',
         },
       },
     },
     MuiTooltip: {
       tooltip: {
-        display: "none",
+        display: 'none',
       },
     },
   },

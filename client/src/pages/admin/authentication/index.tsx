@@ -1,8 +1,8 @@
-import React from "react";
-import {CssBaseline, Box, Container} from "@material-ui/core";
-import LoginComponent from "../../../components/admin/login";
+import React from 'react';
+import {CssBaseline, Box, Container} from '@material-ui/core';
+import LoginComponent from '../../../components/admin/login';
 
-const AuthenticationPage = () => {
+const AuthenticationPage: React.FC = () => {
   return (
     <Box>
       <CssBaseline />

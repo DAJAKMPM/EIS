@@ -24,5 +24,14 @@ export const useStyles = makeStyles((theme) =>
     formControl: {
       minWidth: 170,
     },
+    input: {
+      display: 'none',
+    },
+    uploadBtn: {
+      marginTop: '9px',
+    },
+    uploadFile: {
+      margin: '12px 0 0 0',
+    },
   })
 );

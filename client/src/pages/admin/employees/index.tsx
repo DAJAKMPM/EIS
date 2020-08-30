@@ -1,11 +1,11 @@
-import React from "react";
-import {FullWindowLayoutProps} from "../../../components/admin/layout/full-window-layout/types";
-import FullWindowLayout from "../../../components/admin/layout/full-window-layout";
-import EmployeeList from "../../../components/admin/employees/search";
+import React from 'react';
+import {FullWindowLayoutProps} from '../../../components/admin/layout/full-window-layout/types';
+import FullWindowLayout from '../../../components/admin/layout/full-window-layout';
+import EmployeeList from '../../../components/admin/employees/search';
 
-const ArticlesIndexPage: React.FC = () => {
+const AdminEmployeesPage: React.FC = () => {
   const fullWindowLayoutProps: FullWindowLayoutProps = {
-    headerTitle: "Employee Management",
+    headerTitle: 'Employee Management',
   };
 
   return (
@@ -15,4 +15,4 @@ const ArticlesIndexPage: React.FC = () => {
   );
 };
 
-export default ArticlesIndexPage;
+export default AdminEmployeesPage;

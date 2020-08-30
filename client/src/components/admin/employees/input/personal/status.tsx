@@ -11,6 +11,7 @@ import {
   InputLabel,
   Select,
   MenuItem,
+  TextField,
 } from '@material-ui/core';
 import {
   MuiPickersUtilsProvider,
@@ -18,17 +19,20 @@ import {
 } from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
 
-const Status = () => {
+const Status: React.FC = () => {
   const [selectedHire, setSelectedHire] = React.useState<Date | null>(null);
   const [selectedRegular, setSelectedRegular] = React.useState<Date | null>(
     null
   );
+  const [dateOfArrival, setDateOfArrival] = React.useState<Date | null>(null);
+  const [dateOfExpire, setDateOfExpire] = React.useState<Date | null>(null);
   const [checkbox, setCheckbox] = React.useState({
     isActive: false,
     isAWOL: false,
     isReHire: false,
   });
   const [placeHired, setPlaceHired] = React.useState('');
+  const [sponsorCompany, setSponsorCompany] = React.useState('');
 
   const handleDateChangeHire = (date: Date | null) => {
     setSelectedHire(date);
@@ -38,12 +42,28 @@ const Status = () => {
     setSelectedRegular(date);
   };
 
+  const handleDateChangeDateofArr = (date: Date | null) => {
+    setDateOfArrival(date);
+  };
+
+  const handleDateChangeDateofExp = (date: Date | null) => {
+    setDateOfExpire(date);
+  };
+
   const handleChangeCheckbox = (event: React.ChangeEvent<HTMLInputElement>) => {
     setCheckbox({...checkbox, [event.target.name]: event.target.checked});
   };
 
-  const handleChangeReligion = (event: React.ChangeEvent<{value: unknown}>) => {
+  const handleChangePlaceHired = (
+    event: React.ChangeEvent<{value: unknown}>
+  ) => {
     setPlaceHired(event.target.value as string);
+  };
+
+  const handleChangesponsorCompany = (
+    event: React.ChangeEvent<{value: unknown}>
+  ) => {
+    setSponsorCompany(event.target.value as string);
   };
 
   return (
@@ -128,13 +148,13 @@ const Status = () => {
         <Grid item sm={6}>
           <FormControl required fullWidth>
             <InputLabel id="demo-simple-select-required-label">
-              Religion
+              Place Hired
             </InputLabel>
             <Select
               labelId="demo-simple-select-required-label"
               id="demo-simple-select-required"
               value={placeHired}
-              onChange={handleChangeReligion}
+              onChange={handleChangePlaceHired}
             >
               <MenuItem value={'catholic'}>Cebu, Philippines</MenuItem>
               <MenuItem value={'hindu'}>Manila, Philippines</MenuItem>
@@ -144,6 +164,86 @@ const Status = () => {
               </MenuItem>
             </Select>
           </FormControl>
+        </Grid>
+        <Grid item sm={3}>
+          <TextField
+            required
+            id="position"
+            name="position"
+            label="Position"
+            fullWidth
+            autoComplete="position"
+          />
+        </Grid>
+        <Grid item sm={3}>
+          <TextField
+            required
+            id="company"
+            name="company"
+            label="Company"
+            fullWidth
+            autoComplete="company"
+          />
+        </Grid>
+        <Grid item sm={3}>
+          <FormControl required fullWidth>
+            <InputLabel id="demo-simple-select-required-label">
+              Sponsor Company
+            </InputLabel>
+            <Select
+              labelId="demo-simple-select-required-label"
+              id="demo-simple-select-required"
+              value={sponsorCompany}
+              onChange={handleChangesponsorCompany}
+            >
+              <MenuItem value={'catholic'}>Fujitsu</MenuItem>
+              <MenuItem value={'hindu'}>Weserv</MenuItem>
+            </Select>
+          </FormControl>
+        </Grid>
+        <Grid item sm={3}>
+          <MuiPickersUtilsProvider utils={DateFnsUtils}>
+            <KeyboardDatePicker
+              fullWidth
+              disableToolbar
+              variant="inline"
+              format="yyyy/MM/dd"
+              id="dateOfArrival"
+              label="Date of Arrival"
+              value={dateOfArrival}
+              onChange={handleDateChangeDateofArr}
+              KeyboardButtonProps={{
+                'aria-label': 'change date',
+              }}
+            />
+          </MuiPickersUtilsProvider>
+        </Grid>
+        <Grid item sm={3}>
+          <TextField
+            required
+            id="gatePassNum"
+            name="gatePassNum"
+            label="Gate Pass Number"
+            fullWidth
+            autoComplete="gatePassNum"
+          />
+        </Grid>
+        <Grid item sm={3}>
+          <MuiPickersUtilsProvider utils={DateFnsUtils}>
+            <KeyboardDatePicker
+              fullWidth
+              disableToolbar
+              variant="inline"
+              format="yyyy/MM/dd"
+              id="dateOfExpire"
+              label="Date of Expire"
+              value={dateOfExpire}
+              onChange={handleDateChangeDateofExp}
+              KeyboardButtonProps={{
+                'aria-label': 'change date',
+              }}
+            />
+          </MuiPickersUtilsProvider>
         </Grid>
       </Grid>
     </React.Fragment>

@@ -4,7 +4,7 @@ import {outerTheme} from './styles';
 import Routes from '../routes';
 import 'fontsource-roboto';
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <div className="App">
       <ThemeProvider theme={outerTheme}>

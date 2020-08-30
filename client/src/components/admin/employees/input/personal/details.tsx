@@ -16,7 +16,7 @@ import {
 } from '@material-ui/pickers';
 import {useStyles} from '../../styles';
 
-const Details = () => {
+const Details: React.FC = () => {
   const classes = useStyles();
   const [gender, setGender] = React.useState('');
   const [marital, setMarital] = React.useState('');
