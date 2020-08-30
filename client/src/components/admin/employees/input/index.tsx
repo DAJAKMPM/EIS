@@ -16,8 +16,10 @@ const Input: React.FC = () => {
 
   const steps = [
     'Personal',
+    'Assignment and Reporting Time',
     'Contact and Family History',
     'Medical and Work History',
+    'Leave and Benefits',
   ];
 
   const handleNext = () => {
@@ -35,6 +37,10 @@ const Input: React.FC = () => {
       case 1:
         return <h1>GG2</h1>;
       case 2:
+        return <h1>GG3</h1>;
+      case 3:
+        return <h1>GG3</h1>;
+      case 4:
         return <h1>GG3</h1>;
       default:
         throw new Error('Unknown step');
