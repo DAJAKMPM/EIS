@@ -1,5 +1,5 @@
-import React from 'react';
-import {useStyles} from '../styles';
+import React from "react";
+import {useStyles} from "../styles";
 import {
   CssBaseline,
   Paper,
@@ -7,19 +7,20 @@ import {
   StepLabel,
   Step,
   Button,
-} from '@material-ui/core';
-import Personal from './personal';
+} from "@material-ui/core";
+import Personal from "./personal";
+import ContactFamilyHistory from "./contact-family-history";
 
 const Input: React.FC = () => {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
 
   const steps = [
-    'Personal',
-    'Assignment and Reporting Time',
-    'Contact and Family History',
-    'Medical and Work History',
-    'Leave and Benefits',
+    "Personal",
+    "Assignment and Reporting Time",
+    "Contact and Family History",
+    "Medical and Work History",
+    "Leave and Benefits",
   ];
 
   const handleNext = () => {
@@ -35,7 +36,7 @@ const Input: React.FC = () => {
       case 0:
         return <Personal />;
       case 1:
-        return <h1>GG2</h1>;
+        return <ContactFamilyHistory />;
       case 2:
         return <h1>GG3</h1>;
       case 3:
@@ -43,7 +44,7 @@ const Input: React.FC = () => {
       case 4:
         return <h1>GG3</h1>;
       default:
-        throw new Error('Unknown step');
+        throw new Error("Unknown step");
     }
   };
 
@@ -71,7 +72,7 @@ const Input: React.FC = () => {
             onClick={handleNext}
             className={classes.button}
           >
-            {activeStep === steps.length - 1 ? 'Place order' : 'Next'}
+            {activeStep === steps.length - 1 ? "Add Employee" : "Next"}
           </Button>
         </div>
       </Paper>

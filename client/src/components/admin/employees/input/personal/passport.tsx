@@ -1,14 +1,14 @@
-import React from 'react';
-import 'date-fns';
-import {Typography, Grid, TextField, Button, Chip} from '@material-ui/core';
+import React from "react";
+import "date-fns";
+import {Typography, Grid, TextField, Button, Chip} from "@material-ui/core";
 import {
   MuiPickersUtilsProvider,
   KeyboardDatePicker,
-} from '@material-ui/pickers';
-import DateFnsUtils from '@date-io/date-fns';
-import ImageIcon from '@material-ui/icons/Image';
-import {useStyles} from '../../styles';
-import CloudUploadIcon from '@material-ui/icons/CloudUpload';
+} from "@material-ui/pickers";
+import DateFnsUtils from "@date-io/date-fns";
+import ImageIcon from "@material-ui/icons/Image";
+import {useStyles} from "../../styles";
+import CloudUploadIcon from "@material-ui/icons/CloudUpload";
 
 const Passport: React.FC = () => {
   const classes = useStyles();
@@ -33,7 +33,7 @@ const Passport: React.FC = () => {
   };
 
   const removePassportFile = React.useCallback(() => {
-    setPassport('');
+    setPassport("");
   }, [setPassport]);
 
   return (
@@ -47,7 +47,7 @@ const Passport: React.FC = () => {
             required
             id="passportNo"
             name="passportNo"
-            label="Passport number"
+            label="Passport Number"
             fullWidth
             autoComplete="passportNo"
           />
@@ -74,7 +74,7 @@ const Passport: React.FC = () => {
               value={passportIssued}
               onChange={handleDateChangePassportIssued}
               KeyboardButtonProps={{
-                'aria-label': 'change date',
+                "aria-label": "change date",
               }}
             />
           </MuiPickersUtilsProvider>
@@ -91,7 +91,7 @@ const Passport: React.FC = () => {
               value={passportExpired}
               onChange={handleDateChangePassportExpired}
               KeyboardButtonProps={{
-                'aria-label': 'change date',
+                "aria-label": "change date",
               }}
             />
           </MuiPickersUtilsProvider>
@@ -112,7 +112,7 @@ const Passport: React.FC = () => {
               variant="contained"
               color="primary"
               component="span"
-              id={'gg2'}
+              id={"gg2"}
             >
               Upload image
             </Button>

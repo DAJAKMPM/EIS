@@ -1,5 +1,5 @@
-import React from 'react';
-import 'date-fns';
+import React from "react";
+import "date-fns";
 import {
   Typography,
   Grid,
@@ -12,12 +12,12 @@ import {
   Select,
   MenuItem,
   TextField,
-} from '@material-ui/core';
+} from "@material-ui/core";
 import {
   MuiPickersUtilsProvider,
   KeyboardDatePicker,
-} from '@material-ui/pickers';
-import DateFnsUtils from '@date-io/date-fns';
+} from "@material-ui/pickers";
+import DateFnsUtils from "@date-io/date-fns";
 
 const Status: React.FC = () => {
   const [selectedHire, setSelectedHire] = React.useState<Date | null>(null);
@@ -31,8 +31,8 @@ const Status: React.FC = () => {
     isAWOL: false,
     isReHire: false,
   });
-  const [placeHired, setPlaceHired] = React.useState('');
-  const [sponsorCompany, setSponsorCompany] = React.useState('');
+  const [placeHired, setPlaceHired] = React.useState("");
+  const [sponsorCompany, setSponsorCompany] = React.useState("");
 
   const handleDateChangeHire = (date: Date | null) => {
     setSelectedHire(date);
@@ -60,7 +60,7 @@ const Status: React.FC = () => {
     setPlaceHired(event.target.value as string);
   };
 
-  const handleChangesponsorCompany = (
+  const handleChangeSponsorCompany = (
     event: React.ChangeEvent<{value: unknown}>
   ) => {
     setSponsorCompany(event.target.value as string);
@@ -84,7 +84,7 @@ const Status: React.FC = () => {
               value={selectedHire}
               onChange={handleDateChangeHire}
               KeyboardButtonProps={{
-                'aria-label': 'change date',
+                "aria-label": "change date",
               }}
             />
           </MuiPickersUtilsProvider>
@@ -101,7 +101,7 @@ const Status: React.FC = () => {
               value={selectedRegular}
               onChange={handleDateChangeRegular}
               KeyboardButtonProps={{
-                'aria-label': 'change date',
+                "aria-label": "change date",
               }}
             />
           </MuiPickersUtilsProvider>
@@ -156,10 +156,10 @@ const Status: React.FC = () => {
               value={placeHired}
               onChange={handleChangePlaceHired}
             >
-              <MenuItem value={'catholic'}>Cebu, Philippines</MenuItem>
-              <MenuItem value={'hindu'}>Manila, Philippines</MenuItem>
-              <MenuItem value={'islamic'}>Palawan, Philippines</MenuItem>
-              <MenuItem value={'buddhism'}>
+              <MenuItem value={"catholic"}>Cebu, Philippines</MenuItem>
+              <MenuItem value={"hindu"}>Manila, Philippines</MenuItem>
+              <MenuItem value={"islamic"}>Palawan, Philippines</MenuItem>
+              <MenuItem value={"buddhism"}>
                 Surigao Del Norte, Philippines
               </MenuItem>
             </Select>
@@ -194,10 +194,10 @@ const Status: React.FC = () => {
               labelId="demo-simple-select-required-label"
               id="demo-simple-select-required"
               value={sponsorCompany}
-              onChange={handleChangesponsorCompany}
+              onChange={handleChangeSponsorCompany}
             >
-              <MenuItem value={'catholic'}>Fujitsu</MenuItem>
-              <MenuItem value={'hindu'}>Weserv</MenuItem>
+              <MenuItem value={"catholic"}>Fujitsu</MenuItem>
+              <MenuItem value={"hindu"}>Weserv</MenuItem>
             </Select>
           </FormControl>
         </Grid>
@@ -213,7 +213,7 @@ const Status: React.FC = () => {
               value={dateOfArrival}
               onChange={handleDateChangeDateofArr}
               KeyboardButtonProps={{
-                'aria-label': 'change date',
+                "aria-label": "change date",
               }}
             />
           </MuiPickersUtilsProvider>
@@ -240,7 +240,7 @@ const Status: React.FC = () => {
               value={dateOfExpire}
               onChange={handleDateChangeDateofExp}
               KeyboardButtonProps={{
-                'aria-label': 'change date',
+                "aria-label": "change date",
               }}
             />
           </MuiPickersUtilsProvider>
