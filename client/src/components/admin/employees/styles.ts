@@ -1,4 +1,5 @@
 import {createStyles, makeStyles} from '@material-ui/core/styles';
+import {indigo, blue, cyan, yellow, deepOrange} from '@material-ui/core/colors';
 
 export const useStyles = makeStyles((theme) =>
   createStyles({
@@ -11,7 +12,7 @@ export const useStyles = makeStyles((theme) =>
       },
     },
     stepper: {
-      padding: theme.spacing(1, 0, 5),
+      padding: theme.spacing(1, 2, 5),
     },
     buttons: {
       display: 'flex',
@@ -32,6 +33,40 @@ export const useStyles = makeStyles((theme) =>
     },
     uploadFile: {
       margin: '12px 0 0 0',
+    },
+    familyHistTable: {
+      minWidth: 650,
+    },
+    addDependentBtn: {
+      position: 'relative',
+      left: '58.3rem',
+      bottom: '14px',
+    },
+    editChip: {
+      background: yellow[400],
+      '&:hover': {
+        background: yellow[600],
+      },
+      '&:active': {
+        background: yellow[600],
+      },
+      '&:focus': {
+        background: yellow[600],
+      },
+    },
+    deleteChip: {
+      marginLeft: '7px',
+      background: deepOrange[500],
+      color: 'white',
+      '&:hover': {
+        background: deepOrange[900],
+      },
+      '&:active': {
+        background: deepOrange[900],
+      },
+      '&:focus': {
+        background: deepOrange[900],
+      },
     },
   })
 );

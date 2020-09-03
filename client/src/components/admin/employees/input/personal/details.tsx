@@ -1,5 +1,4 @@
 import React from 'react';
-import 'date-fns';
 import {
   Grid,
   Typography,
@@ -15,6 +14,7 @@ import {
   KeyboardDatePicker,
 } from '@material-ui/pickers';
 import {useStyles} from '../../styles';
+import 'date-fns';
 
 const Details: React.FC = () => {
   const classes = useStyles();
@@ -169,7 +169,7 @@ const Details: React.FC = () => {
             />
           </MuiPickersUtilsProvider>
         </Grid>
-        <Grid item sm={8}>
+        <Grid item sm={12}>
           <TextField
             required
             id="birthplace"

@@ -6,6 +6,8 @@ import {Button, CssBaseline} from '@material-ui/core';
 import {useStyles} from '../styles';
 import {columns} from './columns';
 import {data} from './data';
+import CustomToolBar from './customToolBar';
+import {SelectedRow} from './types';
 
 const Search: React.FC = () => {
   const classes = useStyles();
@@ -19,6 +21,9 @@ const Search: React.FC = () => {
   const options: MUIDataTableOptions = {
     filterType: 'checkbox',
     customToolbar: addButton,
+    customToolbarSelect: (selectedRows: SelectedRow) => (
+      <CustomToolBar selectedRows={selectedRows} />
+    ),
   };
 
   return (
