@@ -1,20 +1,20 @@
-import React from 'react';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-import MuiDialogContent from '@material-ui/core/DialogContent';
-import GroupAddIcon from '@material-ui/icons/GroupAdd';
-import TextField from '@material-ui/core/TextField';
-import EditIcon from '@material-ui/icons/Edit';
-import DeleteIcon from '@material-ui/icons/Delete';
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import {useStyles} from '../../styles';
-import 'date-fns';
+import React from "react";
+import Table from "@material-ui/core/Table";
+import TableBody from "@material-ui/core/TableBody";
+import TableCell from "@material-ui/core/TableCell";
+import TableContainer from "@material-ui/core/TableContainer";
+import TableHead from "@material-ui/core/TableHead";
+import TableRow from "@material-ui/core/TableRow";
+import MuiDialogContent from "@material-ui/core/DialogContent";
+import GroupAddIcon from "@material-ui/icons/GroupAdd";
+import TextField from "@material-ui/core/TextField";
+import EditIcon from "@material-ui/icons/Edit";
+import DeleteIcon from "@material-ui/icons/Delete";
+import Dialog from "@material-ui/core/Dialog";
+import DialogActions from "@material-ui/core/DialogActions";
+import DialogTitle from "@material-ui/core/DialogTitle";
+import {useStyles} from "../../styles";
+import "date-fns";
 import {
   Typography,
   Button,
@@ -27,17 +27,17 @@ import {
   MenuItem,
   Chip,
   Box,
-} from '@material-ui/core';
-import DateFnsUtils from '@date-io/date-fns';
+} from "@material-ui/core";
+import DateFnsUtils from "@date-io/date-fns";
 import {
   MuiPickersUtilsProvider,
   KeyboardDatePicker,
-} from '@material-ui/pickers';
+} from "@material-ui/pickers";
 
 const FamilyHistory = () => {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
-  const [relation, setRelation] = React.useState('');
+  const [relation, setRelation] = React.useState("");
   const [selectedDate, setSelectedDate] = React.useState<Date | null>(null);
 
   const handleChangeRelation = (event: React.ChangeEvent<{value: unknown}>) => {
@@ -78,50 +78,50 @@ const FamilyHistory = () => {
 
   const rows = [
     createData(
-      '1234',
-      'Namikaze',
-      'Minato',
-      'Yondaime',
-      'Father',
-      '2020/12/30',
+      "1234",
+      "Namikaze",
+      "Minato",
+      "Yondaime",
+      "Father",
+      "2020/12/30",
       <React.Fragment>
         <Chip
           size="small"
           className={classes.editChip}
-          icon={<EditIcon />}
+          icon={<EditIcon style={{color: "white"}} />}
           label="Edit"
           onClick={handleClickOpen}
         />
         <Chip
           size="small"
           className={classes.deleteChip}
-          icon={<DeleteIcon style={{color: 'white'}} />}
+          icon={<DeleteIcon style={{color: "white"}} />}
           label="Delete"
-          onClick={() => console.log('edit')}
+          onClick={() => console.log("edit")}
         />
       </React.Fragment>
     ),
     createData(
-      '1235',
-      'Uzumaki',
-      'Kushina',
-      'Wife of yondaime',
-      'Mother',
-      '2020/12/30',
+      "1235",
+      "Uzumaki",
+      "Kushina",
+      "Wife of yondaime",
+      "Mother",
+      "2020/12/30",
       <React.Fragment>
         <Chip
           size="small"
           className={classes.editChip}
-          icon={<EditIcon />}
+          icon={<EditIcon style={{color: "white"}} />}
           label="Edit"
           onClick={handleClickOpen}
         />
         <Chip
           size="small"
           className={classes.deleteChip}
-          icon={<DeleteIcon style={{color: 'white'}} />}
+          icon={<DeleteIcon style={{color: "white"}} />}
           label="Delete"
-          onClick={() => console.log('edit')}
+          onClick={() => console.log("edit")}
         />
       </React.Fragment>
     ),
@@ -138,7 +138,7 @@ const FamilyHistory = () => {
       <Typography variant="h6" gutterBottom>
         Family History
       </Typography>
-      <Box style={{float: 'right'}}>
+      <Box style={{float: "right"}}>
         <Button
           variant="contained"
           color="secondary"
@@ -198,8 +198,8 @@ const FamilyHistory = () => {
                   value={relation}
                   onChange={handleChangeRelation}
                 >
-                  <MenuItem value={'mother'}>Mother</MenuItem>
-                  <MenuItem value={'father'}>Father</MenuItem>
+                  <MenuItem value={"mother"}>Mother</MenuItem>
+                  <MenuItem value={"father"}>Father</MenuItem>
                 </Select>
               </FormControl>
             </Grid>
@@ -215,7 +215,7 @@ const FamilyHistory = () => {
                   value={selectedDate}
                   onChange={handleDateChange}
                   KeyboardButtonProps={{
-                    'aria-label': 'change date',
+                    "aria-label": "change date",
                   }}
                 />
               </MuiPickersUtilsProvider>
@@ -235,7 +235,7 @@ const FamilyHistory = () => {
         <Table className={classes.familyHistTable} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell align="center" style={{width: '14%'}}>
+              <TableCell align="center" style={{width: "14%"}}>
                 Dependent ID
               </TableCell>
               <TableCell align="center">Last Name</TableCell>

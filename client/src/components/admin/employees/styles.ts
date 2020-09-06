@@ -1,10 +1,10 @@
-import {createStyles, makeStyles} from '@material-ui/core/styles';
-import {indigo, blue, cyan, yellow, deepOrange} from '@material-ui/core/colors';
+import {createStyles, makeStyles} from "@material-ui/core/styles";
+import {cyan, yellow, red} from "@material-ui/core/colors";
 
 export const useStyles = makeStyles((theme) =>
   createStyles({
     addIcon: {
-      color: 'rgba(0, 0, 0, 0.54)',
+      color: "rgba(0, 0, 0, 0.54)",
     },
     paper: {
       [theme.breakpoints.up(600 + theme.spacing(3))]: {
@@ -15,8 +15,8 @@ export const useStyles = makeStyles((theme) =>
       padding: theme.spacing(1, 2, 5),
     },
     buttons: {
-      display: 'flex',
-      justifyContent: 'flex-end',
+      display: "flex",
+      justifyContent: "flex-end",
     },
     button: {
       marginTop: theme.spacing(3),
@@ -26,46 +26,47 @@ export const useStyles = makeStyles((theme) =>
       minWidth: 170,
     },
     input: {
-      display: 'none',
+      display: "none",
     },
     uploadBtn: {
-      marginTop: '9px',
+      marginTop: "9px",
     },
     uploadFile: {
-      margin: '12px 0 0 0',
+      margin: "12px 0 0 0",
     },
     familyHistTable: {
       minWidth: 650,
     },
     addDependentBtn: {
-      position: 'relative',
-      left: '58.3rem',
-      bottom: '14px',
+      position: "relative",
+      left: "58.3rem",
+      bottom: "14px",
     },
     editChip: {
-      background: yellow[400],
-      '&:hover': {
-        background: yellow[600],
+      background: cyan[700],
+      color: "white",
+      "&:hover": {
+        background: cyan[800],
       },
-      '&:active': {
-        background: yellow[600],
+      "&:active": {
+        background: cyan[800],
       },
-      '&:focus': {
-        background: yellow[600],
+      "&:focus": {
+        background: cyan[800],
       },
     },
     deleteChip: {
-      marginLeft: '7px',
-      background: deepOrange[500],
-      color: 'white',
-      '&:hover': {
-        background: deepOrange[900],
+      marginLeft: "7px",
+      background: red[700],
+      color: "white",
+      "&:hover": {
+        background: red[900],
       },
-      '&:active': {
-        background: deepOrange[900],
+      "&:active": {
+        background: red[900],
       },
-      '&:focus': {
-        background: deepOrange[900],
+      "&:focus": {
+        background: red[900],
       },
     },
   })
