@@ -1,10 +1,10 @@
-import {createStyles, makeStyles} from "@material-ui/core/styles";
-import {cyan, yellow, red} from "@material-ui/core/colors";
+import {createStyles, makeStyles} from '@material-ui/core/styles';
+import {cyan, yellow, red} from '@material-ui/core/colors';
 
 export const useStyles = makeStyles((theme) =>
   createStyles({
     addIcon: {
-      color: "rgba(0, 0, 0, 0.54)",
+      color: 'rgba(0, 0, 0, 0.54)',
     },
     paper: {
       [theme.breakpoints.up(600 + theme.spacing(3))]: {
@@ -15,8 +15,8 @@ export const useStyles = makeStyles((theme) =>
       padding: theme.spacing(1, 2, 5),
     },
     buttons: {
-      display: "flex",
-      justifyContent: "flex-end",
+      display: 'flex',
+      justifyContent: 'flex-end',
     },
     button: {
       marginTop: theme.spacing(3),
@@ -26,46 +26,49 @@ export const useStyles = makeStyles((theme) =>
       minWidth: 170,
     },
     input: {
-      display: "none",
+      display: 'none',
     },
     uploadBtn: {
-      marginTop: "9px",
+      marginTop: '9px',
     },
     uploadFile: {
-      margin: "12px 0 0 0",
+      margin: '12px 0 0 0',
     },
     familyHistTable: {
       minWidth: 650,
     },
     addDependentBtn: {
-      position: "relative",
-      left: "58.3rem",
-      bottom: "14px",
+      position: 'relative',
+      left: '58.3rem',
+      bottom: '14px',
     },
     editChip: {
       background: cyan[700],
-      color: "white",
-      "&:hover": {
+      color: 'white',
+      '&:hover': {
         background: cyan[800],
       },
-      "&:active": {
+      '&:active': {
         background: cyan[800],
       },
-      "&:focus": {
+      '&:focus': {
         background: cyan[800],
       },
     },
+    iconContainer: {
+      marginRight: '24px',
+    },
     deleteChip: {
-      marginLeft: "7px",
+      marginLeft: '7px',
       background: red[700],
-      color: "white",
-      "&:hover": {
+      color: 'white',
+      '&:hover': {
         background: red[900],
       },
-      "&:active": {
+      '&:active': {
         background: red[900],
       },
-      "&:focus": {
+      '&:focus': {
         background: red[900],
       },
     },

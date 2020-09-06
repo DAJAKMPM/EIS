@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Box,
   Chip,
@@ -11,26 +11,26 @@ import {
   withStyles,
   TextField,
   DialogActions,
-} from "@material-ui/core";
-import EditIcon from "@material-ui/icons/Edit";
-import MuiDialogContent from "@material-ui/core/DialogContent";
-import ImageIcon from "@material-ui/icons/Image";
-import DeleteIcon from "@material-ui/icons/Delete";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
-import TableHead from "@material-ui/core/TableHead";
-import HealingIcon from "@material-ui/icons/Healing";
-import TableRow from "@material-ui/core/TableRow";
-import "date-fns";
-import DateFnsUtils from "@date-io/date-fns";
-import CloudUploadIcon from "@material-ui/icons/CloudUpload";
+} from '@material-ui/core';
+import EditIcon from '@material-ui/icons/Edit';
+import MuiDialogContent from '@material-ui/core/DialogContent';
+import ImageIcon from '@material-ui/icons/Image';
+import DeleteIcon from '@material-ui/icons/Delete';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import HealingIcon from '@material-ui/icons/Healing';
+import TableRow from '@material-ui/core/TableRow';
+import 'date-fns';
+import DateFnsUtils from '@date-io/date-fns';
+import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import {
   MuiPickersUtilsProvider,
   KeyboardDatePicker,
-} from "@material-ui/pickers";
-import {useStyles} from "../../styles";
+} from '@material-ui/pickers';
+import {useStyles} from '../../styles';
 
 const MedicalHistory: React.FC = () => {
   const classes = useStyles();
@@ -53,7 +53,7 @@ const MedicalHistory: React.FC = () => {
   };
 
   const removeMedCert = React.useCallback(() => {
-    setMedCert("");
+    setMedCert('');
   }, [setMedCert]);
 
   const handleDateChange = (date: Date | null) => {
@@ -80,25 +80,25 @@ const MedicalHistory: React.FC = () => {
 
   const rows = [
     createData(
-      "1234",
-      "2020/12/30",
-      "Laboratory",
-      "Dr. Seuss",
-      "Negative",
+      '1234',
+      '2020/12/30',
+      'Laboratory',
+      'Dr. Seuss',
+      'Negative',
       <React.Fragment>
         <Chip
           size="small"
           className={classes.editChip}
-          icon={<EditIcon style={{color: "white"}} />}
+          icon={<EditIcon style={{color: 'white'}} />}
           label="Edit"
-          onClick={() => console.log("edit")}
+          onClick={() => console.log('edit')}
         />
         <Chip
           size="small"
           className={classes.deleteChip}
-          icon={<DeleteIcon style={{color: "white"}} />}
+          icon={<DeleteIcon style={{color: 'white'}} />}
           label="Delete"
-          onClick={() => console.log("delete")}
+          onClick={() => console.log('delete')}
         />
       </React.Fragment>
     ),
@@ -112,10 +112,13 @@ const MedicalHistory: React.FC = () => {
 
   return (
     <React.Fragment>
-      <Typography variant="h6" gutterBottom>
-        Medical History
-      </Typography>
-      <Box style={{float: "right"}}>
+      <div tabIndex={0} id="mainHeader">
+        <Typography variant="h6" gutterBottom>
+          Medical History
+        </Typography>
+      </div>
+
+      <Box style={{float: 'right'}}>
         <Button
           variant="contained"
           color="secondary"
@@ -129,9 +132,9 @@ const MedicalHistory: React.FC = () => {
       <Dialog
         open={open}
         onClose={handleClose}
-        aria-labelledby="form-dialog-title"
+        aria-labelledby="form-dialog-medical"
       >
-        <DialogTitle id="form-dialog-title">Add Medical Record</DialogTitle>
+        <DialogTitle id="form-dialog-medical">Add Medical Record</DialogTitle>
         <DialogContent>
           <Grid container spacing={5}>
             <Grid item sm={12}>
@@ -166,7 +169,7 @@ const MedicalHistory: React.FC = () => {
                   value={selectedDate}
                   onChange={handleDateChange}
                   KeyboardButtonProps={{
-                    "aria-label": "change date",
+                    'aria-label': 'change date',
                   }}
                 />
               </MuiPickersUtilsProvider>
@@ -196,7 +199,7 @@ const MedicalHistory: React.FC = () => {
         <Table className={classes.familyHistTable} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell align="center" style={{width: "14%"}}>
+              <TableCell align="center" style={{width: '14%'}}>
                 Medical ID
               </TableCell>
               <TableCell align="center">Date of Check up</TableCell>

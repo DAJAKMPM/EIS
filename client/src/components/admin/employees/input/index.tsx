@@ -1,5 +1,5 @@
-import React from "react";
-import {useStyles} from "../styles";
+import React from 'react';
+import {useStyles} from '../styles';
 import {
   CssBaseline,
   Paper,
@@ -7,21 +7,26 @@ import {
   StepLabel,
   Step,
   Button,
-} from "@material-ui/core";
-import Personal from "./personal";
-import ContactFamilyHistory from "./contact-family-history";
-import MedicalWorkHistory from "./medical-work-history";
+} from '@material-ui/core';
+import Personal from './personal';
+import ContactFamilyHistory from './contact-family-history';
+import MedicalWorkHistory from './medical-work-history';
+import LeaveBenefits from './leave-benefits';
 
 const Input: React.FC = () => {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
 
+  React.useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [activeStep]);
+
   const steps = [
-    "Personal",
-    "Assignment and Reporting Time",
-    "Contact and Family History",
-    "Medical and Work History",
-    "Leave and Benefits",
+    'Personal',
+    'Assignment and Reporting Time',
+    'Contact and Family History',
+    'Medical and Work History',
+    'Leaves and Benefits',
   ];
 
   const handleNext = () => {
@@ -37,15 +42,15 @@ const Input: React.FC = () => {
       case 0:
         return <Personal />;
       case 1:
-        return <h1>GG2</h1>;
+        return <h1>GG</h1>;
       case 2:
         return <ContactFamilyHistory />;
       case 3:
         return <MedicalWorkHistory />;
       case 4:
-        return <h1>GG3</h1>;
+        return <LeaveBenefits />;
       default:
-        throw new Error("Unknown step");
+        throw new Error('Unknown step');
     }
   };
 
@@ -60,22 +65,24 @@ const Input: React.FC = () => {
             </Step>
           ))}
         </Stepper>
-        {getStepContent(activeStep)}
-        <div className={classes.buttons}>
-          {activeStep !== 0 && (
-            <Button onClick={handleBack} className={classes.button}>
-              Back
+        <React.Fragment>
+          {getStepContent(activeStep)}
+          <div className={classes.buttons}>
+            {activeStep !== 0 && (
+              <Button onClick={handleBack} className={classes.button}>
+                Back
+              </Button>
+            )}
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={handleNext}
+              className={classes.button}
+            >
+              {activeStep === steps.length - 1 ? 'Add Employee' : 'Next'}
             </Button>
-          )}
-          <Button
-            variant="contained"
-            color="primary"
-            onClick={handleNext}
-            className={classes.button}
-          >
-            {activeStep === steps.length - 1 ? "Add Employee" : "Next"}
-          </Button>
-        </div>
+          </div>
+        </React.Fragment>
       </Paper>
     </React.Fragment>
   );

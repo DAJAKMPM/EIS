@@ -10,6 +10,10 @@ import Bir from './bir';
 import Benefits from './benefits';
 
 const Personal: React.FC = () => {
+  React.useLayoutEffect(() => {
+    window.scrollTo(2000000, 2000000);
+  }, []);
+
   return (
     <React.Fragment>
       <Box marginTop={3}>
