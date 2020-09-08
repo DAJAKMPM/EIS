@@ -6,7 +6,7 @@ import {CssBaseline, IconButton} from '@material-ui/core';
 import {useStyles} from '../styles';
 import {columns} from './columns';
 import {data} from './data';
-import CustomToolBar from './customToolBar';
+import Toolbar from './tool-bar';
 import {SelectedRow} from './types';
 
 const Search: React.FC = () => {
@@ -22,7 +22,7 @@ const Search: React.FC = () => {
     filterType: 'checkbox',
     customToolbar: addButton,
     customToolbarSelect: (selectedRows: SelectedRow) => (
-      <CustomToolBar selectedRows={selectedRows} />
+      <Toolbar selectedRows={selectedRows} />
     ),
   };
 

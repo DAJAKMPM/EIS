@@ -15,7 +15,6 @@ import {
 import EditIcon from '@material-ui/icons/Edit';
 import WorkIcon from '@material-ui/icons/Work';
 import MuiDialogContent from '@material-ui/core/DialogContent';
-import ImageIcon from '@material-ui/icons/Image';
 import DeleteIcon from '@material-ui/icons/Delete';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -25,7 +24,6 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import 'date-fns';
 import DateFnsUtils from '@date-io/date-fns';
-import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import {
   MuiPickersUtilsProvider,
   KeyboardDatePicker,

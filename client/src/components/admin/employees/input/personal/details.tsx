@@ -7,13 +7,17 @@ import {
   InputLabel,
   Select,
   MenuItem,
+  Button,
+  Chip,
 } from '@material-ui/core';
 import DateFnsUtils from '@date-io/date-fns';
 import {
   MuiPickersUtilsProvider,
   KeyboardDatePicker,
 } from '@material-ui/pickers';
+import ImageIcon from '@material-ui/icons/Image';
 import {useStyles} from '../../styles';
+import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import 'date-fns';
 
 const Details: React.FC = () => {
@@ -23,6 +27,16 @@ const Details: React.FC = () => {
   const [nationality, setNationality] = React.useState('');
   const [religion, setReligion] = React.useState('');
   const [selectedDate, setSelectedDate] = React.useState<Date | null>(null);
+  const [empPic, setEmpPic] = React.useState<string | null>(null);
+
+  const handleChangEmpPic = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.currentTarget.files && e.currentTarget.files[0].name;
+    setEmpPic(file);
+  };
+
+  const removeEmpPic = React.useCallback(() => {
+    setEmpPic('');
+  }, [setEmpPic]);
 
   const handleChangeGender = (event: React.ChangeEvent<{value: unknown}>) => {
     setGender(event.target.value as string);
@@ -178,6 +192,38 @@ const Details: React.FC = () => {
             fullWidth
             autoComplete="birthplace"
           />
+        </Grid>
+        <Grid item>
+          <input
+            accept="image/*"
+            className={classes.input}
+            id="empPic"
+            onChange={handleChangEmpPic}
+            type="file"
+          />
+          <label htmlFor="empPic">
+            <Button
+              className={classes.uploadBtn}
+              startIcon={<CloudUploadIcon />}
+              variant="contained"
+              color="primary"
+              component="span"
+              id={'gg2'}
+            >
+              Upload image
+            </Button>
+          </label>
+        </Grid>
+        <Grid item>
+          {empPic && (
+            <Chip
+              icon={<ImageIcon />}
+              color="default"
+              className={classes.uploadFile}
+              label={empPic}
+              onDelete={removeEmpPic}
+            />
+          )}
         </Grid>
       </Grid>
     </React.Fragment>

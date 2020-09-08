@@ -6,13 +6,13 @@ import VisibilityIcon from '@material-ui/icons/Visibility';
 import EditIcon from '@material-ui/icons/Edit';
 import DeleteIcon from '@material-ui/icons/Delete';
 
-const CustomToolBar: React.FC<CustomToolBarProps> = ({selectedRows}) => {
+const Toolbar: React.FC<CustomToolBarProps> = ({selectedRows}) => {
   const classes = useStyles();
 
   console.log(selectedRows);
   return (
     <div className={classes.iconContainer}>
-      <IconButton onClick={() => console.log('view')}>
+      <IconButton href="/admin/employees/view-employee">
         <VisibilityIcon />
       </IconButton>
       <IconButton onClick={() => console.log('edit')}>
@@ -25,4 +25,4 @@ const CustomToolBar: React.FC<CustomToolBarProps> = ({selectedRows}) => {
   );
 };
 
-export default CustomToolBar;
+export default React.memo(Toolbar);

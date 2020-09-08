@@ -1,5 +1,5 @@
 import {unstable_createMuiStrictModeTheme as createMuiTheme} from '@material-ui/core/styles';
-import {grey, deepPurple, teal, lightBlue} from '@material-ui/core/colors';
+import {grey, lightBlue} from '@material-ui/core/colors';
 
 export const outerTheme = createMuiTheme({
   palette: {
