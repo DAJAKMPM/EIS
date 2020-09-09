@@ -8,7 +8,7 @@ export const useStyles = makeStyles((theme) =>
     },
     paper: {
       [theme.breakpoints.up(600 + theme.spacing(3))]: {
-        padding: theme.spacing(8),
+        padding: theme.spacing(4),
       },
     },
     stepper: {
@@ -71,6 +71,17 @@ export const useStyles = makeStyles((theme) =>
       '&:focus': {
         background: red[900],
       },
+    },
+    image: {
+      width: 128,
+      height: 128,
+    },
+    img: {
+      margin: 'auto',
+      display: 'block',
+      width: 250,
+      height: 250,
+      borderRadius: '50%',
     },
   })
 );

@@ -1,6 +1,7 @@
 import React from 'react';
 import {FullWindowLayoutProps} from '../../../../components/admin/layout/full-window-layout/types';
 import FullWindowLayout from '../../../../components/admin/layout/full-window-layout';
+import EmployeeView from '../../../../components/admin/employees/view';
 
 const VwEmployeePersonal: React.FC = () => {
   const fullWindowLayoutProps: FullWindowLayoutProps = {
@@ -9,7 +10,7 @@ const VwEmployeePersonal: React.FC = () => {
 
   return (
     <FullWindowLayout {...fullWindowLayoutProps}>
-      <h1>GG</h1>
+      <EmployeeView />
     </FullWindowLayout>
   );
 };
