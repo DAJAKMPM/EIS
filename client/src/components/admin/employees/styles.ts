@@ -1,5 +1,5 @@
 import {createStyles, makeStyles} from '@material-ui/core/styles';
-import {cyan, red} from '@material-ui/core/colors';
+import {cyan, red, teal} from '@material-ui/core/colors';
 
 export const useStyles = makeStyles((theme) =>
   createStyles({
@@ -77,11 +77,18 @@ export const useStyles = makeStyles((theme) =>
       height: 128,
     },
     img: {
-      margin: 'auto',
+      width: '300px',
+      height: '300px',
       display: 'block',
-      width: 250,
-      height: 250,
       borderRadius: '50%',
+    },
+    cardImage: {
+      width: '100%',
+      height: '100%',
+      display: 'block',
+    },
+    labelChip: {
+      background: teal[100],
     },
   })
 );

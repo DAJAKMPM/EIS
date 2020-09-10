@@ -7,6 +7,9 @@ import TabContext from '@material-ui/lab/TabContext';
 import TabList from '@material-ui/lab/TabList';
 import TabPanel from '@material-ui/lab/TabPanel';
 import Personal from './personal';
+import ContactFamilyHistory from './contact-family-history';
+import MedicalWorkHistory from './medical-work-history';
+import LeaveBenefits from './leave-benefits';
 
 const View: React.FC = () => {
   const classes = useStyles();
@@ -36,10 +39,14 @@ const View: React.FC = () => {
         </AppBar>
         <Paper className={classes.paper} square>
           <Personal />
+
           <TabPanel value="2">Item Two</TabPanel>
-          <TabPanel value="3">Item Three</TabPanel>
-          <TabPanel value="4">Item Four</TabPanel>
-          <TabPanel value="5">Item Five</TabPanel>
+
+          <ContactFamilyHistory />
+
+          <MedicalWorkHistory />
+
+          <LeaveBenefits />
         </Paper>
       </TabContext>
     </React.Fragment>
