@@ -11,6 +11,11 @@ export const useStyles = makeStyles((theme) =>
         padding: theme.spacing(4),
       },
     },
+    searchPaper: {
+      [theme.breakpoints.up(600 + theme.spacing(3))]: {
+        padding: theme.spacing(5),
+      },
+    },
     stepper: {
       padding: theme.spacing(1, 2, 5),
     },

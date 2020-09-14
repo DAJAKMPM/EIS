@@ -32,10 +32,5 @@ export const outerTheme = createMuiTheme({
         },
       },
     },
-    MuiTooltip: {
-      tooltip: {
-        display: 'none',
-      },
-    },
   },
 });
