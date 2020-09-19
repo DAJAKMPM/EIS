@@ -13,6 +13,8 @@ import {
   Box,
   Button,
   Tooltip,
+  Menu,
+  MenuItem,
 } from '@material-ui/core';
 import {useStyles} from '../styles';
 import VisibilityIcon from '@material-ui/icons/Visibility';
@@ -29,6 +31,15 @@ const Search: React.FC = () => {
   const classes = useStyles();
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   const handleChangePage = (
     event: React.MouseEvent<HTMLButtonElement> | null,
@@ -90,197 +101,7 @@ const Search: React.FC = () => {
           </Grid>
           <Grid item>
             <Tooltip title="Edit">
-              <IconButton aria-label="View" size="small">
-                <EditIcon />
-              </IconButton>
-            </Tooltip>
-          </Grid>
-          <Grid item>
-            <Tooltip title="Inactive">
-              <IconButton aria-label="View" size="small">
-                <ClearIcon />
-              </IconButton>
-            </Tooltip>
-          </Grid>
-        </Grid>
-      </React.Fragment>
-    ),
-    createData(
-      '1234',
-      'Dann Anthony J. Astillero',
-      'Applications System Engineer',
-      '12312312',
-      '12312312',
-      '12312312',
-      '12312312',
-      <React.Fragment>
-        <Grid container>
-          <Grid item>
-            <Tooltip title="View">
-              <IconButton
-                aria-label="View"
-                size="small"
-                href="/admin/employees/view-employee"
-              >
-                <VisibilityIcon />
-              </IconButton>
-            </Tooltip>
-          </Grid>
-          <Grid item>
-            <Tooltip title="Edit">
-              <IconButton aria-label="View" size="small">
-                <EditIcon />
-              </IconButton>
-            </Tooltip>
-          </Grid>
-          <Grid item>
-            <Tooltip title="Inactive">
-              <IconButton aria-label="View" size="small">
-                <ClearIcon />
-              </IconButton>
-            </Tooltip>
-          </Grid>
-        </Grid>
-      </React.Fragment>
-    ),
-    createData(
-      '1234',
-      'Dann Anthony J. Astillero',
-      'Applications System Engineer',
-      '12312312',
-      '12312312',
-      '12312312',
-      '12312312',
-      <React.Fragment>
-        <Grid container>
-          <Grid item>
-            <Tooltip title="View">
-              <IconButton
-                aria-label="View"
-                size="small"
-                href="/admin/employees/view-employee"
-              >
-                <VisibilityIcon />
-              </IconButton>
-            </Tooltip>
-          </Grid>
-          <Grid item>
-            <Tooltip title="Edit">
-              <IconButton aria-label="View" size="small">
-                <EditIcon />
-              </IconButton>
-            </Tooltip>
-          </Grid>
-          <Grid item>
-            <Tooltip title="Inactive">
-              <IconButton aria-label="View" size="small">
-                <ClearIcon />
-              </IconButton>
-            </Tooltip>
-          </Grid>
-        </Grid>
-      </React.Fragment>
-    ),
-    createData(
-      '1234',
-      'Dann Anthony J. Astillero',
-      'Applications System Engineer',
-      '12312312',
-      '12312312',
-      '12312312',
-      '12312312',
-      <React.Fragment>
-        <Grid container>
-          <Grid item>
-            <Tooltip title="View">
-              <IconButton
-                aria-label="View"
-                size="small"
-                href="/admin/employees/view-employee"
-              >
-                <VisibilityIcon />
-              </IconButton>
-            </Tooltip>
-          </Grid>
-          <Grid item>
-            <Tooltip title="Edit">
-              <IconButton aria-label="View" size="small">
-                <EditIcon />
-              </IconButton>
-            </Tooltip>
-          </Grid>
-          <Grid item>
-            <Tooltip title="Inactive">
-              <IconButton aria-label="View" size="small">
-                <ClearIcon />
-              </IconButton>
-            </Tooltip>
-          </Grid>
-        </Grid>
-      </React.Fragment>
-    ),
-    createData(
-      '1234',
-      'Dann Anthony J. Astillero',
-      'Applications System Engineer',
-      '12312312',
-      '12312312',
-      '12312312',
-      '12312312',
-      <React.Fragment>
-        <Grid container>
-          <Grid item>
-            <Tooltip title="View">
-              <IconButton
-                aria-label="View"
-                size="small"
-                href="/admin/employees/view-employee"
-              >
-                <VisibilityIcon />
-              </IconButton>
-            </Tooltip>
-          </Grid>
-          <Grid item>
-            <Tooltip title="Edit">
-              <IconButton aria-label="View" size="small">
-                <EditIcon />
-              </IconButton>
-            </Tooltip>
-          </Grid>
-          <Grid item>
-            <Tooltip title="Inactive">
-              <IconButton aria-label="View" size="small">
-                <ClearIcon />
-              </IconButton>
-            </Tooltip>
-          </Grid>
-        </Grid>
-      </React.Fragment>
-    ),
-    createData(
-      '1234',
-      'Dann Anthony J. Astillero',
-      'Applications System Engineer',
-      '12312312',
-      '12312312',
-      '12312312',
-      '12312312',
-      <React.Fragment>
-        <Grid container>
-          <Grid item>
-            <Tooltip title="View">
-              <IconButton
-                aria-label="View"
-                size="small"
-                href="/admin/employees/view-employee"
-              >
-                <VisibilityIcon />
-              </IconButton>
-            </Tooltip>
-          </Grid>
-          <Grid item>
-            <Tooltip title="Edit">
-              <IconButton aria-label="View" size="small">
+              <IconButton aria-label="View" size="small" onClick={handleClick}>
                 <EditIcon />
               </IconButton>
             </Tooltip>
@@ -300,6 +121,45 @@ const Search: React.FC = () => {
   return (
     <React.Fragment>
       <CssBaseline />
+      <Menu
+        id="simple-menu"
+        anchorEl={anchorEl}
+        keepMounted
+        open={Boolean(anchorEl)}
+        onClose={handleClose}
+      >
+        <MenuItem
+          onClick={handleClose}
+          component="a"
+          href="/admin/employees/edit-employee/personal"
+        >
+          Personal
+        </MenuItem>
+        <MenuItem onClick={handleClose} component="a" href="#">
+          Assignment And Reporting Time
+        </MenuItem>
+        <MenuItem
+          onClick={handleClose}
+          component="a"
+          href="/admin/employees/edit-employee/contact-family-history"
+        >
+          Contact and Family History
+        </MenuItem>
+        <MenuItem
+          onClick={handleClose}
+          component="a"
+          href="/admin/employees/edit-employee/medical-work-history"
+        >
+          Medical and Work History
+        </MenuItem>
+        <MenuItem
+          onClick={handleClose}
+          component="a"
+          href="/admin/employees/edit-employee/leave-benefits"
+        >
+          Leave and Benefits
+        </MenuItem>
+      </Menu>
       <Paper className={classes.searchPaper} variant="outlined" square>
         <Grid container spacing={5} alignItems="flex-end">
           <Grid item>
@@ -312,7 +172,7 @@ const Search: React.FC = () => {
             </Typography>
           </Grid>
           <Grid item sm={2}>
-            <TextField id="input-with-icon-grid" variant="outlined" />
+            <TextField id="input-with-icon-grid1" variant="outlined" />
           </Grid>
           <Grid item sm={8} />
           <Grid item>
@@ -326,7 +186,7 @@ const Search: React.FC = () => {
           </Grid>
           <Grid item sm={2}>
             <TextField
-              id="input-with-icon-grid"
+              id="input-with-icon-grid2"
               variant="outlined"
               style={{width: '30em'}}
             />
