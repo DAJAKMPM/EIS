@@ -5,11 +5,18 @@ import {Box} from '@material-ui/core';
 import DriversLicense from './drivers-license';
 import HealthCard from './health-card';
 import Passport from './passport';
+import Visa from './visa';
+import Bir from './bir';
+import Benefits from './benefits';
 
 const Personal: React.FC = () => {
+  React.useLayoutEffect(() => {
+    window.scrollTo(2000000, 2000000);
+  }, []);
+
   return (
     <React.Fragment>
-      <Box>
+      <Box marginTop={3}>
         <Details />
       </Box>
 
@@ -27,6 +34,18 @@ const Personal: React.FC = () => {
 
       <Box marginTop={8}>
         <Passport />
+      </Box>
+
+      <Box marginTop={8}>
+        <Visa />
+      </Box>
+
+      <Box marginTop={8}>
+        <Bir />
+      </Box>
+
+      <Box marginTop={8}>
+        <Benefits />
       </Box>
     </React.Fragment>
   );
