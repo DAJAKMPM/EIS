@@ -1,5 +1,5 @@
 import {unstable_createMuiStrictModeTheme as createMuiTheme} from '@material-ui/core/styles';
-import {grey, lightGreen} from '@material-ui/core/colors';
+import {grey, lightBlue} from '@material-ui/core/colors';
 
 export const outerTheme = createMuiTheme({
   palette: {
@@ -7,7 +7,7 @@ export const outerTheme = createMuiTheme({
       main: '#00796b',
     },
     secondary: {
-      main: lightGreen[50],
+      main: lightBlue[900],
     },
     background: {
       default: grey[100],
@@ -30,11 +30,6 @@ export const outerTheme = createMuiTheme({
         '&:after': {
           borderColor: 'white',
         },
-      },
-    },
-    MuiTooltip: {
-      tooltip: {
-        display: 'none',
       },
     },
   },
