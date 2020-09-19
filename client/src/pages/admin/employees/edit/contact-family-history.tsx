@@ -3,7 +3,7 @@ import {FullWindowLayoutProps} from '../../../../components/admin/layout/full-wi
 import FullWindowLayout from '../../../../components/admin/layout/full-window-layout';
 import EditContactFamilyHist from '../../../../components/admin/employees/edit/contact-family-history';
 
-const EdtCntctFmlyEmployee: React.FC = () => {
+const EdtCntctFmlyEmployeePage: React.FC = () => {
   const fullWindowLayoutProps: FullWindowLayoutProps = {
     headerTitle: 'Edit Contact and Family History',
   };
@@ -15,4 +15,4 @@ const EdtCntctFmlyEmployee: React.FC = () => {
   );
 };
 
-export default EdtCntctFmlyEmployee;
+export default EdtCntctFmlyEmployeePage;

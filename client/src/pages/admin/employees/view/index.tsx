@@ -3,7 +3,7 @@ import {FullWindowLayoutProps} from '../../../../components/admin/layout/full-wi
 import FullWindowLayout from '../../../../components/admin/layout/full-window-layout';
 import EmployeeView from '../../../../components/admin/employees/view';
 
-const VwEmployeePersonal: React.FC = () => {
+const VwEmployeePage: React.FC = () => {
   const fullWindowLayoutProps: FullWindowLayoutProps = {
     headerTitle: 'View Employee',
   };
@@ -15,4 +15,4 @@ const VwEmployeePersonal: React.FC = () => {
   );
 };
 
-export default VwEmployeePersonal;
+export default VwEmployeePage;

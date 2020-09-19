@@ -3,7 +3,7 @@ import {FullWindowLayoutProps} from '../../../../components/admin/layout/full-wi
 import FullWindowLayout from '../../../../components/admin/layout/full-window-layout';
 import EditMedWorkHist from '../../../../components/admin/employees/edit/medical-work-history';
 
-const EdtMedWorkHistEmployee: React.FC = () => {
+const EdtMedWorkHistEmployeePage: React.FC = () => {
   const fullWindowLayoutProps: FullWindowLayoutProps = {
     headerTitle: 'Edit Medical and Work History',
   };
@@ -15,4 +15,4 @@ const EdtMedWorkHistEmployee: React.FC = () => {
   );
 };
 
-export default EdtMedWorkHistEmployee;
+export default EdtMedWorkHistEmployeePage;

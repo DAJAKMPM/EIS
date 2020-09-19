@@ -3,7 +3,7 @@ import {FullWindowLayoutProps} from '../../../../components/admin/layout/full-wi
 import FullWindowLayout from '../../../../components/admin/layout/full-window-layout';
 import EditPersonal from '../../../../components/admin/employees/edit/personal';
 
-const EdtPrsnlEmployee: React.FC = () => {
+const EdtPrsnlEmployeePage: React.FC = () => {
   const fullWindowLayoutProps: FullWindowLayoutProps = {
     headerTitle: 'Edit Personal Information',
   };
@@ -15,4 +15,4 @@ const EdtPrsnlEmployee: React.FC = () => {
   );
 };
 
-export default EdtPrsnlEmployee;
+export default EdtPrsnlEmployeePage;

@@ -3,7 +3,7 @@ import {FullWindowLayoutProps} from '../../../../components/admin/layout/full-wi
 import FullWindowLayout from '../../../../components/admin/layout/full-window-layout';
 import EditLeaveBenefits from '../../../../components/admin/employees/edit/leave-benefits';
 
-const EdtLeaveBenefitstEmployee: React.FC = () => {
+const EdtLeaveBenefitstEmployeePage: React.FC = () => {
   const fullWindowLayoutProps: FullWindowLayoutProps = {
     headerTitle: 'Edit Leave and Benefits',
   };
@@ -15,4 +15,4 @@ const EdtLeaveBenefitstEmployee: React.FC = () => {
   );
 };
 
-export default EdtLeaveBenefitstEmployee;
+export default EdtLeaveBenefitstEmployeePage;

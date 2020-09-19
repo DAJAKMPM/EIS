@@ -10,9 +10,7 @@ import {
   Avatar,
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import MoreIcon from '@material-ui/icons/MoreVert';
-import AccountCircle from '@material-ui/icons/AccountCircle';
 import {HeaderProps} from './types';
 import {useStyles} from './styles';
 
@@ -61,28 +59,8 @@ const Header: React.FC<HeaderProps> = ({open, setOpen, headerTitle}) => {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleProfileMenuOpen}>
-        <IconButton
-          aria-label="account of current user"
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
-          color="inherit"
-        >
-          <AccountCircle />
-        </IconButton>
-        Profile
-      </MenuItem>
-      <MenuItem onClick={() => console.log('LOGGED OUT')}>
-        <IconButton
-          aria-label="account of current user"
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
-          color="inherit"
-        >
-          <ExitToAppIcon />
-        </IconButton>
-        Logout
-      </MenuItem>
+      <MenuItem onClick={handleProfileMenuOpen}>Profile</MenuItem>
+      <MenuItem onClick={() => console.log('LOGGED OUT')}>Logout</MenuItem>
     </Menu>
   );
 
@@ -96,28 +74,8 @@ const Header: React.FC<HeaderProps> = ({open, setOpen, headerTitle}) => {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem onClick={handleMobileMenuOpen}>
-        <IconButton
-          aria-label="account of current user"
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
-          color="inherit"
-        >
-          <AccountCircle />
-        </IconButton>
-        Profile
-      </MenuItem>
-      <MenuItem onClick={() => console.log('LOGGED OUT')}>
-        <IconButton
-          aria-label="account of current user"
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
-          color="inherit"
-        >
-          <ExitToAppIcon />
-        </IconButton>
-        Sign Out
-      </MenuItem>
+      <MenuItem onClick={handleMobileMenuOpen}>Profile</MenuItem>
+      <MenuItem onClick={() => console.log('LOGGED OUT')}>Sign Out</MenuItem>
     </Menu>
   );
 

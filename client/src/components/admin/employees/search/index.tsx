@@ -172,7 +172,11 @@ const Search: React.FC = () => {
             </Typography>
           </Grid>
           <Grid item sm={2}>
-            <TextField id="input-with-icon-grid1" variant="outlined" />
+            <TextField
+              id="input-with-icon-grid1"
+              variant="outlined"
+              size="small"
+            />
           </Grid>
           <Grid item sm={8} />
           <Grid item>
@@ -187,8 +191,9 @@ const Search: React.FC = () => {
           <Grid item sm={2}>
             <TextField
               id="input-with-icon-grid2"
-              variant="outlined"
               style={{width: '30em'}}
+              variant="outlined"
+              size="small"
             />
           </Grid>
         </Grid>
